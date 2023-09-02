@@ -1,0 +1,14 @@
+<h2 [routerLink]="['/home']">The Dining Room</h2>
+<hr />
+<a [routerLink]="['/home']">Home</a>
+<br />
+<a [routerLink]="['/restaurants']">Restaurants</a>
+<br />
+<div class="row" *ngFor="let cuisine of cuisines">
+  <div class="col">
+    <a [routerLink]="['/restaurants/', cuisine]">{{ cuisine }}</a>
+  </div>
+</div>
+<br />
+
+<a [routerLink]="['/about']">About</a>

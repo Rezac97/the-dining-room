@@ -1,0 +1,32 @@
+<br />
+<div class="row">
+  <div class="col-6">
+    <app-pagination></app-pagination>
+  </div>
+  <div class="col-6">
+    Price Range:
+    <label for="price"></label>
+    <input
+      type="number"
+      name="price"
+      id=""
+      style="margin-right: 10px"
+      [formControl]="priceFromControl"
+      (change)="onPriceChanged()"
+    />
+    <label for="price"></label>
+    <input
+      type="number"
+      name="price"
+      id=""
+      [formControl]="priceToControl"
+      (change)="onPriceChanged()"
+    />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-4" *ngFor="let item of restaurants.results">
+    <app-restaurant-item [restaurant]="item"></app-restaurant-item>
+  </div>
+</div>
